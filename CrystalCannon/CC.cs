@@ -1,16 +1,13 @@
-﻿using BepInEx; // requires BepInEx.dll and BepInEx.Harmony.dll
-using UnboundLib; // requires UnboundLib.dll
-using UnboundLib.Cards; // " "
-using HarmonyLib; // requires 0Harmony.dll
-using CC.Cards;
-using UnityEngine;
-
+﻿using BepInEx;
+using UnboundLib;
+using UnboundLib.Cards;
+using HarmonyLib;
 
 // ReSharper disable InconsistentNaming
 // ReSharper disable StringLiteralTypo
 
 
-namespace CC
+namespace CrystalCannon
 {
     [BepInDependency("com.willis.rounds.unbound")] // necessary for most modding stuff here
     [BepInDependency("pykess.rounds.plugins.playerjumppatch")] // fixes multiple jumps
@@ -26,7 +23,6 @@ namespace CC
     {
         private void Awake()
         {
-            UnityEngine.Debug.Log("Crystal Cannon It WORKS!!!"); 
             new Harmony(ModId).PatchAll();
         }
 
@@ -37,9 +33,10 @@ namespace CC
             Unbound.RegisterCredits(ModName, new[] { "Denatle" }, null, "");
 
             // build all cards
-            CustomCard.BuildCard<CrystalCannon>();
+            CustomCard.BuildCard<global::CrystalCannon.Cards.CrystalCannon>();
         }
 
+        public static CC instance { get; private set; }
         private const string ModId = "denatle.rounds.plugins.crystalcannon";
         private const string ModName = "Crystal Cannon";
         public const string ModInitials = "CC";
