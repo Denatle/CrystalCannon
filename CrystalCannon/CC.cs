@@ -17,7 +17,7 @@ namespace CrystalCannon
     [BepInDependency("pykess.rounds.plugins.temporarystatspatch")] // fixes Taste Of Blood, Pristine Perserverence, and Chase when combined with cards from PCE
     [BepInDependency("pykess.rounds.plugins.moddingutils")] // utilities for cards and cardbars
     [BepInDependency("com.dk.rounds.plugins.zerogpatch")]
-    [BepInPlugin(ModId, ModName, "0.1.1")]
+    [BepInPlugin(ModId, ModName, "0.1.2")]
     [BepInProcess("Rounds.exe")]
     public class CC : BaseUnityPlugin
     {
@@ -30,7 +30,7 @@ namespace CrystalCannon
         {
             instance = this;
             // register credits with unbound
-            Unbound.RegisterCredits(ModName, new[] { "Denatle" }, null, "");
+            Unbound.RegisterCredits(ModName, new[] { "Denatle" }, "Github", "https://github.com/Denatle/CrystalCannon");
 
             // build all cards
             CustomCard.BuildCard<global::CrystalCannon.Cards.CrystalCannon>();

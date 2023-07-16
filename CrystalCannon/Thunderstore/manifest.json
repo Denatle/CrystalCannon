@@ -1,7 +1,7 @@
 {
   "name": "CrystalCannon",
   "description": "Adds an interesting card",
-  "version_number": "0.1.1",
+  "version_number": "0.1.2",
   "dependencies": [
     "BepInEx-BepInExPack_ROUNDS-5.4.1100",
     "willis81808-UnboundLib-2.11.0",
