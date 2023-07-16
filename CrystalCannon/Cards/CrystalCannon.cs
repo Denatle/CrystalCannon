@@ -35,7 +35,8 @@ namespace CrystalCannon.Cards
 
         protected override string GetDescription()
         {
-            return "Get killed on damage. Kill with 2 shots.";
+            return
+                "Kill anyone with <b><color=#5fa52aff>2 shots.</color></b>\nGet killed on <b><color=#a52a2aff>ANY damage.</color></b>";
         }
 
         protected override GameObject GetCardArt()
