@@ -1,4 +1,5 @@
-﻿using UnboundLib.Cards;
+﻿using CrystalCannon.Effects;
+using UnboundLib.Cards;
 using UnityEngine;
 
 // ReSharper disable ParameterHidesMember
@@ -10,14 +11,15 @@ namespace CrystalCannon.Cards
         public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats,
             CharacterStatModifiers statModifiers, Block block)
         {
+            cardInfo.allowMultiple = false;
         }
 
         public override void OnAddCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data,
             HealthHandler health,
             Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
-            statModifiers.WasDealtDamageAction = (damage, selfDamage) => { characterStats.health = 0; };
-            gun.percentageDamage = 50f;
+            player.gameObject.AddComponent<CrystalCannonDamageEffect>().player = player;
+            player.gameObject.AddComponent<CrystalCannonWasDamagedEffect>().player = player;
         }
 
         public override void OnRemoveCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data,
@@ -33,7 +35,7 @@ namespace CrystalCannon.Cards
 
         protected override string GetDescription()
         {
-            return "Get killed on any damage. Kill anyone with 2 shots.";
+            return "Get killed on damage. Kill with 2 shots.";
         }
 
         protected override GameObject GetCardArt()

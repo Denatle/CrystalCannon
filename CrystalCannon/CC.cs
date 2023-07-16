@@ -17,7 +17,7 @@ namespace CrystalCannon
     [BepInDependency("pykess.rounds.plugins.temporarystatspatch")] // fixes Taste Of Blood, Pristine Perserverence, and Chase when combined with cards from PCE
     [BepInDependency("pykess.rounds.plugins.moddingutils")] // utilities for cards and cardbars
     [BepInDependency("com.dk.rounds.plugins.zerogpatch")]
-    [BepInPlugin(ModId, ModName, "0.0.1")]
+    [BepInPlugin(ModId, ModName, "0.1.0")]
     [BepInProcess("Rounds.exe")]
     public class CC : BaseUnityPlugin
     {
