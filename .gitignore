@@ -3,6 +3,6 @@ obj/
 /packages/
 riderModule.iml
 /_ReSharper.Caches/
-/CrystalCannon/Thunderstore/CrystalCannon.dll
-/CrystalCannon/Thunderstore/Crystal.zip
+/CrystalCannon/Thunderstore/*.dll
+/CrystalCannon/Thunderstore/*.zip
 /.idea/

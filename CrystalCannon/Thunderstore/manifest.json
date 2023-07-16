@@ -1,6 +1,6 @@
 {
   "name": "CrystalCannon",
-  "description": "Adds an interesting card",
+  "description": "Adds interesting card",
   "version_number": "0.1.2",
   "dependencies": [
     "BepInEx-BepInExPack_ROUNDS-5.4.1100",
