@@ -1,4 +1,5 @@
 ﻿using CrystalCannon.Effects;
+using UnboundLib;
 using UnboundLib.Cards;
 using UnityEngine;
 
@@ -12,13 +13,14 @@ namespace CrystalCannon.Cards
             CharacterStatModifiers statModifiers, Block block)
         {
             cardInfo.allowMultiple = false;
+            block.cdAdd = float.PositiveInfinity;
         }
 
         public override void OnAddCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data,
             HealthHandler health,
             Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
-            player.gameObject.AddComponent<CrystalCannonDamageEffect>().player = player;
+            player.gameObject.AddComponent<CrystalCannonDamageEffect>();
             player.gameObject.AddComponent<CrystalCannonWasDamagedEffect>().player = player;
         }
 
@@ -36,7 +38,7 @@ namespace CrystalCannon.Cards
         protected override string GetDescription()
         {
             return
-                "Kill anyone with <b><color=#5fa52aff>2 shots.</color></b>\nGet killed on <b><color=#a52a2aff>ANY damage.</color></b>";
+                "Kill anyone with <b><color=#5fa52aff>2 shots.</color></b>\nGet killed on <b><color=#a52a2aff>ANY damage.</color></b>\n<b>1 BLOCK</b>";
         }
 
         protected override GameObject GetCardArt()

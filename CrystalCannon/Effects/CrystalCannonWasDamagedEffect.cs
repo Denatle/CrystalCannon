@@ -13,7 +13,7 @@ namespace CrystalCannon.Effects
             {
                 return;
             }
-            UnityEngine.Debug.Log("Took Damage! Crystal");
+
             data.healthHandler.TakeDamage(new Vector2(data.maxHealth, data.maxHealth) * damage,
                 data.transform.position);
         }

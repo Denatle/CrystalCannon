@@ -1,7 +1,7 @@
 {
-  "name": "Crystal Cannon",
-  "description": "Adds a interesting card",
-  "version_number": "0.1.0",
+  "name": "CrystalCannon",
+  "description": "Adds an interesting card",
+  "version_number": "0.1.1",
   "dependencies": [
     "BepInEx-BepInExPack_ROUNDS-5.4.1100",
     "willis81808-UnboundLib-2.11.0",
@@ -13,6 +13,6 @@
     "Pykess-ModdingUtils-0.4.6",
     "TeamDK-ZeroGBulletPatch-1.1.0"
   ],
-  "website_url": ""
+  "website_url": "https://github.com/Denatle/CrystalCannon"
 }
 
